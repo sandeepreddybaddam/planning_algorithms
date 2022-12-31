@@ -11,7 +11,8 @@ Notes:
 3. Set the distance from A to A as 0 and A to other as infinity
 4. Now, visit the unvisited vertex with smallest known distance from the
     start vertex.
-5. For the current vertex, we visit the unvisited neighbors. Note down the distances.
+5. For the current vertex, we visit the unvisited neighbors. Note down the 
+   distances.
 6. Distance = Distance at cur. state + distance to next state
 7. If the calculated distance is less than the already present value. UPDATE
 8. Note down the previous state information for the visited states.
@@ -23,7 +24,8 @@ Notes:
 | -----   | -------------------------------------- | --------------- |
 */
 
-// find the unvisted vertex with the smallest known distance from the start index
+// find the unvisted vertex with the smallest known distance from the 
+// start index
 int find_minimum_distance_index(const std::vector<int>& minimum_distance, \
                                 const std::vector<bool>& is_visited) {
     
@@ -76,9 +78,11 @@ void find_shortest_path(const std::vector<std::vector<int>>& graph, \
         }
     }
 
-    std::cout<<"Vertex\tDistance from starting vertex\tPrevious index"<<std::endl;
+    std::cout << "Vertex\tDistance from starting vertex\tPrevious index"
+              << std::endl;
     for (int i=0; i<graph.size(); i++) {
-        std::cout<<i<<"\t\t"<<minimum_distance[i]<<"\t\t\t\t"<<prev_index[i]<<std::endl;
+        std::cout<<i<<"\t\t"<<minimum_distance[i]<<"\t\t\t\t"<< prev_index[i] \
+                                                             << std::endl;
     }
     
     // visualizing the shortest path
